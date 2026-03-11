@@ -33,80 +33,37 @@
   <!-- MAIN: this is where the photo grid will live (Day 3!) -->
   <main>
 
+    <!-- ADD PHOTO CONTROL PANEL -->
+  <div class="controls">
+
+    <h3>Add a Photo</h3>
+
+    <div class="controls-row">
+
+      <input 
+        type="text" 
+        id="newSrc" 
+        placeholder="filename.jpg (just the filename!)">
+
+      <input 
+        type="text" 
+        id="newCaption" 
+        placeholder="Caption for the photo">
+
+      <button onclick="addPhoto()">+ Add Photo</button>
+
+    </div>
+
+    <p class="controls-note">
+      💡 Make sure the photo file is already in your images/ folder first!
+    </p>
+
+  </div>
+
+
+    <!-- Gallery is now built by JavaScript from the photos array in gallery.js -->
     <section class="gallery">
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-01.jpg" alt="Newton's Museum visit - photo 1">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-02.jpg" alt="Newton's Museum visit - photo 2">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-03.jpg" alt="Newton's Museum visit - photo 3">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-04.jpg" alt="Newton's Museum visit - photo 4">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-05.jpg" alt="Newton's Museum visit - photo 5">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-06.jpg" alt="Newton's Museum visit - photo 6">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-07.jpg" alt="Newton's Museum visit - photo 7">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-08.jpg" alt="Newton's Museum visit - photo 8">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-09.jpg" alt="Newton's Museum visit - photo 9">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-10.jpg" alt="Newton's Museum visit - photo 10">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-11.jpg" alt="Newton's Museum visit - photo 11">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-12.jpg" alt="Newton's Museum visit - photo 12">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-13.jpg" alt="Newton's Museum visit - photo 13">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-14.jpg" alt="Newton's Museum visit - photo 14">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-15.jpg" alt="Newton's Museum visit - photo 15">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-16.jpg" alt="Newton's Museum visit - photo 16">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-17.jpg" alt="Newton's Museum visit - photo 17">
-      </div>
-  
-      <div class="gallery-item">
-        <img src="images/newton-museum-18.jpg" alt="Newton's Museum visit - photo 18">
-      </div>
-  
+      <!-- JavaScript fills this in automatically -->
     </section>
   
   </main>

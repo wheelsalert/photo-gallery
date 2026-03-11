@@ -150,3 +150,111 @@ header {
   .close-btn:hover {
     opacity: 1;             /* fully visible on hover */
   }
+
+  /* ================================
+   CONTROL PANEL
+================================ */
+
+.controls {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px 24px;
+    background: #16213e;       /* slightly lighter than page background */
+    border-radius: 12px;
+    border: 1px solid #2a2a4a;
+  }
+  
+  .controls h3 {
+    color: #f0a500;            /* gold — matches your heading */
+    margin-bottom: 14px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .controls-row {
+    display: flex;             /* puts inputs and button in a row */
+    gap: 10px;
+    flex-wrap: wrap;           /* wraps to next line on small screens */
+  }
+  
+  .controls input {
+    flex: 1;                   /* each input takes equal space */
+    min-width: 160px;          /* won't shrink below this */
+    padding: 10px 14px;
+    background: #0f0f23;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;             /* removes default browser focus ring */
+  }
+  
+  .controls input:focus {
+    border-color: #f0a500;     /* gold border when clicked into */
+  }
+  
+  .controls input::placeholder {
+    color: #555577;            /* dim placeholder text */
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    background: #f0a500;       /* gold button */
+    color: #1a1a2e;            /* dark text on gold */
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    white-space: nowrap;       /* keeps button text on one line */
+  }
+  
+  .controls button:hover {
+    background: #ffb800;       /* slightly brighter gold on hover */
+  }
+  
+  .controls-note {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #555577;
+    text-align: left;
+  }
+  
+  
+  /* ================================
+     REMOVE BUTTON (on each photo)
+  ================================ */
+  
+  .remove-btn {
+    display: block;
+    width: calc(100% - 20px);  /* full width minus some padding */
+    margin: 8px 10px 10px;
+    padding: 6px;
+    background: transparent;
+    border: 1px solid #cc3333;
+    border-radius: 6px;
+    color: #cc3333;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    background: #cc3333;
+    color: white;
+  }
+  
+  
+  /* ================================
+     CAPTIONS
+  ================================ */
+  
+  .caption {
+    text-align: center;
+    padding: 8px 10px 4px;
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin: 0;
+  }
