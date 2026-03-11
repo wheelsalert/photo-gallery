@@ -297,3 +297,27 @@ header {
     }
   
   }
+
+  /* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #2a2a4a;
+    color: #555577;
+    font-size: 0.85rem;
+  }
+  
+  footer p {
+    margin: 4px 0;
+    text-align: center;
+    color: #555577;
+  }
+  
+  .footer-sub {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
