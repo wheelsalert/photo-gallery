@@ -32,7 +32,7 @@ let photos = [
   // from the photos array above
   // ================================
   
-  function renderGallery() {
+  function renderGallery(photoList) {
     // Find the gallery section in the HTML
     const gallery = document.querySelector('.gallery');
   
@@ -45,7 +45,7 @@ let photos = [
   
     // Loop through every photo in the array
     // and build an HTML card for each one
-    photos.forEach(function(photo, index) {
+    photoList.forEach(function(photo, index) {
   
       // Create a new div element in memory
       const item = document.createElement('div');
