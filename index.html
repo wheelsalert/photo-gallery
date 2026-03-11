@@ -15,7 +15,7 @@
         <!-- This makes it look right on phones (don't worry about this yet) -->
 
 
-        <title>My Photo Gallery</title>
+        <title>Newton's Museum - Photo Gallery</title>
         <!-- This is the text that appears on the browser TAB -->
 
         <!-- This line connects your CSS file to this HTML file -->
@@ -110,6 +110,20 @@
     </section>
   
   </main>
+
+  <!-- LIGHTBOX: hidden by default, shown by JavaScript when a photo is clicked -->
+  <div class="lightbox" id="lightbox">
+
+    <!-- The X button to close -->
+    <span class="close-btn" id="closeBtn">&times;</span>
+
+    <!-- This img starts empty — JavaScript fills it in when you click a photo -->
+    <img src="" alt="Expanded photo view" id="lightboxImg">
+
+  </div>
+
+  <!-- Link your JavaScript file — ALWAYS at the bottom, just before </body> -->
+  <script src="js/gallery.js"></script>
 
     </body>
 
