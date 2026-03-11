@@ -5,24 +5,24 @@
 // ================================
 
 let photos = [
-    { src: 'images/newton-museum-01.jpg', caption: 'Newton\'s Museum - 01', category: 'exhibits' },
-    { src: 'images/newton-museum-02.jpg', caption: 'Newton\'s Museum - 02', category: 'exhibits' },
-    { src: 'images/newton-museum-03.jpg', caption: 'Newton\'s Museum - 03', category: 'people' },
-    { src: 'images/newton-museum-04.jpg', caption: 'Newton\'s Museum - 04', category: 'people' },
-    { src: 'images/newton-museum-05.jpg', caption: 'Newton\'s Museum - 05', category: 'details' },
-    { src: 'images/newton-museum-06.jpg', caption: 'Newton\'s Museum - 06', category: 'details' },
-    { src: 'images/newton-museum-07.jpg', caption: 'Newton\'s Museum - 07', category: 'building' },
-    { src: 'images/newton-museum-08.jpg', caption: 'Newton\'s Museum - 08', category: 'building' },
-    { src: 'images/newton-museum-09.jpg', caption: 'Newton\'s Museum - 09', category: 'exhibits' },
-    { src: 'images/newton-museum-10.jpg', caption: 'Newton\'s Museum - 10', category: 'exhibits' },
-    { src: 'images/newton-museum-11.jpg', caption: 'Newton\'s Museum - 11', category: 'people' },
-    { src: 'images/newton-museum-12.jpg', caption: 'Newton\'s Museum - 12', category: 'details' },
-    { src: 'images/newton-museum-13.jpg', caption: 'Newton\'s Museum - 13', category: 'building' },
-    { src: 'images/newton-museum-14.jpg', caption: 'Newton\'s Museum - 14', category: 'exhibits' },
-    { src: 'images/newton-museum-15.jpg', caption: 'Newton\'s Museum - 15', category: 'people' },
-    { src: 'images/newton-museum-16.jpg', caption: 'Newton\'s Museum - 16', category: 'details' },
-    { src: 'images/newton-museum-17.jpg', caption: 'Newton\'s Museum - 17', category: 'building' },
-    { src: 'images/newton-museum-18.jpg', caption: 'Newton\'s Museum - 18', category: 'exhibits' },
+    { src: 'images/newton-museum-01.jpg', caption: 'Newton\'s Museum - 01' },
+    { src: 'images/newton-museum-02.jpg', caption: 'Newton\'s Museum - 02' },
+    { src: 'images/newton-museum-03.jpg', caption: 'Newton\'s Museum - 03' },
+    { src: 'images/newton-museum-04.jpg', caption: 'Newton\'s Museum - 04' },
+    { src: 'images/newton-museum-05.jpg', caption: 'Newton\'s Museum - 05' },
+    { src: 'images/newton-museum-06.jpg', caption: 'Newton\'s Museum - 06' },
+    { src: 'images/newton-museum-07.jpg', caption: 'Newton\'s Museum - 07' },
+    { src: 'images/newton-museum-08.jpg', caption: 'Newton\'s Museum - 08' },
+    { src: 'images/newton-museum-09.jpg', caption: 'Newton\'s Museum - 09' },
+    { src: 'images/newton-museum-10.jpg', caption: 'Newton\'s Museum - 10' },
+    { src: 'images/newton-museum-11.jpg', caption: 'Newton\'s Museum - 11' },
+    { src: 'images/newton-museum-12.jpg', caption: 'Newton\'s Museum - 12' },
+    { src: 'images/newton-museum-13.jpg', caption: 'Newton\'s Museum - 13' },
+    { src: 'images/newton-museum-14.jpg', caption: 'Newton\'s Museum - 14' },
+    { src: 'images/newton-museum-15.jpg', caption: 'Newton\'s Museum - 15' },
+    { src: 'images/newton-museum-16.jpg', caption: 'Newton\'s Museum - 16' },
+    { src: 'images/newton-museum-17.jpg', caption: 'Newton\'s Museum - 17' },
+    { src: 'images/newton-museum-18.jpg', caption: 'Newton\'s Museum - 18' },
   ];
   
   
@@ -39,9 +39,6 @@ let photos = [
     // Clear everything currently in the gallery
     // innerHTML = the HTML content INSIDE an element
     gallery.innerHTML = '';
-
-    // If no photoList passed in, use the full photos array
-    if (!photoList) { photoList = photos; }
   
     // Loop through every photo in the array
     // and build an HTML card for each one
@@ -186,34 +183,4 @@ let photos = [
   // Run renderGallery when the page loads
   // ================================
   
-// ================================
-// FILTER GALLERY
-// Shows only photos matching
-// the selected category
-// ================================
-
-let currentFilter = 'all';    // tracks which filter is active
-
-function filterGallery(category) {
-  // Update the current filter
-  currentFilter = category;
-
-  // Update which button looks "active"
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(function(btn) {
-    btn.classList.remove('active');
-  });
-  document.querySelector(`[data-category="${category}"]`).classList.add('active');
-
-  // Show all photos or filter by category
-  if (category === 'all') {
-    renderGallery(photos);
-  } else {
-    const filtered = photos.filter(function(photo) {
-      return photo.category === category;
-    });
-    renderGallery(filtered);
-  }
-}
-
   renderGallery();

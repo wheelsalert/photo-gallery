@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;                    /* removes default white space browsers add */
   padding: 20px;                /* breathing room inside the page edges */
+  scroll-behavior: smooth;
 }
 
 
@@ -35,19 +36,37 @@ p {
 }
 
 /* ================================
-   HEADER SECTION
+   HEADER — updated
 ================================ */
 
 header {
     text-align: center;
-    padding: 40px 20px 20px;     /* top right/left bottom */
-    border-bottom: 1px solid #333333;  /* subtle dividing line */
-    margin-bottom: 30px;
+    padding: 50px 20px 30px;
+    border-bottom: 1px solid #2a2a4a;
+    margin-bottom: 10px;
   }
   
-  main {
-    max-width: 1200px;           /* stops content from stretching too wide */
-    margin: 0 auto;              /* auto left+right margin = centers the box */
+  .header-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .subtitle {
+    color: #888899;
+    font-size: 1rem;
+    margin-top: 8px;
+    font-style: italic;
+  }
+  
+  .header-meta {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: #555577;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   /* ================================
@@ -359,4 +378,75 @@ footer {
       grid-template-columns: 1fr;   /* 1 column on very small phones */
     }
   
+  }
+
+  /* ================================
+   FILTER BUTTONS
+================================ */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #2a2a4a;
+    border-radius: 20px;        /* pill shape */
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-btn:hover {
+    border-color: #f0a500;
+    color: #f0a500;
+  }
+  
+  /* The currently selected filter button */
+  .filter-btn.active {
+    background: #f0a500;        /* gold background */
+    border-color: #f0a500;
+    color: #1a1a2e;             /* dark text */
+    font-weight: bold;
+  }
+  
+  /* Mobile — stack filter buttons */
+  @media (max-width: 600px) {
+    .filters {
+      gap: 8px;
+      padding: 12px;
+    }
+  
+    .filter-btn {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+    }
+  }
+
+  /* ================================
+   BACK TO TOP BUTTON
+================================ */
+
+.back-to-top {
+    margin-top: 16px;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #2a2a4a;
+    border-radius: 20px;
+    color: #555577;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .back-to-top:hover {
+    border-color: #f0a500;
+    color: #f0a500;
   }
