@@ -258,3 +258,42 @@ header {
     color: #aaaaaa;
     margin: 0;
   }
+
+  /* ================================
+   MOBILE RESPONSIVE
+   These rules only apply when 
+   screen is 600px wide or less
+================================ */
+
+@media (max-width: 600px) {
+
+    h1 {
+      font-size: 1.6rem;      /* smaller heading on phone */
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columns on phone */
+      gap: 8px;
+    }
+  
+    .gallery-item img {
+      height: 150px;          /* shorter tiles on small screen */
+    }
+  
+    .controls-row {
+      flex-direction: column;  /* stack inputs vertically on phone */
+    }
+  
+    .controls button {
+      width: 100%;             /* full width button on phone */
+    }
+  
+  }
+  
+  @media (max-width: 400px) {
+  
+    .gallery {
+      grid-template-columns: 1fr;   /* 1 column on very small phones */
+    }
+  
+  }
