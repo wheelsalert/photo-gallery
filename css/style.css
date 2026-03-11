@@ -1,0 +1,51 @@
+/* ================================
+   GLOBAL STYLES
+   These affect the whole page
+================================ */
+
+body {
+  background-color: #1a1a2e;   /* dark navy background */
+  color: #ffffff;               /* white text (inherits to all text inside) */
+  font-family: Arial, sans-serif;
+  margin: 0;                    /* removes default white space browsers add */
+  padding: 20px;                /* breathing room inside the page edges */
+}
+
+
+/* ================================
+   HEADER STYLES
+================================ */
+
+h1 {
+  color: #f0a500;               /* gold color */
+  text-align: center;
+  font-size: 2.5rem;            /* rem = relative to base size. 2.5rem ≈ 40px */
+  margin-bottom: 8px;
+
+
+/* Try these and see what they do: */
+    padding: 20px;          /* adds space inside around the text */
+    border: 2px solid red;  /* adds a red border so you can SEE the box */
+}
+
+p {
+  text-align: center;
+  color: #aaaaaa;               /* light grey — softer than full white */
+  font-size: 1rem;
+}
+
+/* ================================
+   HEADER SECTION
+================================ */
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;     /* top right/left bottom */
+    border-bottom: 1px solid #333333;  /* subtle dividing line */
+    margin-bottom: 30px;
+  }
+  
+  main {
+    max-width: 1200px;           /* stops content from stretching too wide */
+    margin: 0 auto;              /* auto left+right margin = centers the box */
+  }
